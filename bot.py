@@ -3,6 +3,7 @@ import time
 import sqlite3
 import logging
 import random
+from config import BOT_TOKEN, ORGANIZER_IDS
 
 # Setup logging
 logging.basicConfig(
@@ -11,11 +12,6 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-# Bot token
-BOT_TOKEN = "8554326421:AAEs5Iz_AVQk-mmfJdQWZOptPyzjkS518rU"
-
-# Admin IDs - ЗАМЕНИТЕ НА ВАШИ TELEGRAM ID
-ORGANIZER_IDS = [1250850045]  # Замените на ваш Telegram ID
 
 class SimpleSantaBot:
     def __init__(self, token):
@@ -542,8 +538,6 @@ class SimpleSantaBot:
                 time.sleep(5)
 
 if __name__ == "__main__":
-    # ВАЖНО: Замените 123456789 на ваш реальный Telegram ID
-    ORGANIZER_IDS = [1250850045]  # <-- ЗАМЕНИТЕ ЭТОТ ID
     
     bot = SimpleSantaBot(BOT_TOKEN)
     bot.run()
